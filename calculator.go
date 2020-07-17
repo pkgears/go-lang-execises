@@ -16,16 +16,12 @@ func (calc) operate(input string, operator string) int {
 	operatorTwo := parseInt(clearedInput[1])
 	switch operator {
 	case "+":
-		fmt.Println(operatorOne + operatorTwo)
 		return (operatorOne + operatorTwo)
 	case "-":
-		fmt.Println(operatorOne - operatorTwo)
 		return (operatorOne - operatorTwo)
 	case "*":
-		fmt.Println(operatorOne * operatorTwo)
 		return (operatorOne * operatorTwo)
 	case "/":
-		fmt.Println(operatorOne / operatorTwo)
 		return (operatorOne / operatorTwo)
 	default:
 		fmt.Println("Unknown operation")
@@ -46,7 +42,9 @@ func readInput() string {
 }
 
 func main() {
+	fmt.Println("Type operation ex(2+2, 4-2, 3*3, 9/3")
 	input := readInput()
+	fmt.Println("Type operator ex(+ - * /)")
 	operator := readInput()
 
 	c := calc{}
